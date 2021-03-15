@@ -1,0 +1,1176 @@
+/******* ESTILOS GENERALES - MOBILE FIRST ********/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    cursor: pointer;
+}
+
+html, body {
+    background: #f2f2f2;
+    font-family: "Poppins", sans-serif;
+    color: black;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.contenedor {
+    display: grid;
+    width: 100%;
+    min-height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 3fr, 1fr;
+    grid-template-areas:
+                        "header"
+                        "main"
+                        "aside"
+                        "footer";
+    
+}
+
+/* CABECERA */
+header {
+    width: 100%;
+    grid-area: header;
+    background-image: url(../images/banner.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    image-rendering: optimizeQuality;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+header div{
+    height: 150px;
+    width: 100%;
+}
+
+
+header nav {
+    margin-top: 80px;
+    z-index: 0;
+}
+
+header nav ul li {
+    list-style: none;
+    padding: 5px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+}
+
+header nav .fa-bars {
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+header nav .fa-times {
+    display: flex;
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 20px;
+    justify-content: flex-end;
+}
+
+.menu{
+    display: none
+}
+
+.visible{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    position: absolute;
+    z-index: 1;
+    background: gold;
+    width: 200px;
+}
+
+.visible li{
+    margin: 10px 0;
+}
+
+.visible a{
+    color: inherit;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+/*ESTILO PARA EL FILTRO DE LA TABLA DINAMICA*/
+.filtro-oculto{
+    display: none;
+}
+
+.filtrado{
+    font-weight: bold;
+}
+
+/* ESTILOS MAIN */
+main {
+    width: 100%;
+    grid-area: main;
+    border-top: 1px solid lightgrey;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+main section {
+    padding: 10px;
+}
+
+/* MAIN INDEX */
+main section h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+main section article h2 {
+    font-size: 20px;
+    text-align: justify;
+}
+
+main section article img {
+    width: 100%;
+}
+
+main section article p {
+    text-align: justify;
+    font-size: 15px;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 5px;
+}
+
+/* ESTILOS MAIN ESTRENOS */
+.mainEstrenos h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.mainEstrenos section h2{
+    text-decoration: underline;
+    text-align: center;
+}
+
+.mainEstrenos article{
+    margin-bottom: 20px;
+}
+
+.mainEstrenos section article h3{
+    text-align: center;
+}
+
+.mainEstrenos section article p{
+    text-align: center;
+}
+
+.mainEstrenos section article iframe{
+    display: none;
+}
+
+/*ESTILOS CONTACTO*/
+.main-contacto h1{
+    text-align: center;
+}
+
+.main-contacto p{
+    text-align: justify;
+}
+
+.main-contacto .formulario{
+    display: block;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.377);
+    padding: 10px;
+}
+
+.main-contacto .formulario input{
+    width: 100%;
+    padding: 5px
+}
+
+.main-contacto .formulario .titulo-genero, .titulo-captcha{
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.main-contacto .formulario .genero{
+    display: block;
+}
+
+.main-contacto .formulario .genero p{
+    text-align: center;
+}
+
+.main-contacto .formulario .titulo-textarea{
+    margin-top: 5px;
+}
+
+.main-contacto .formulario textarea{
+    width: 100%;
+}
+
+.main-contacto .formulario .captcha input{
+    margin: 10px 0;
+    text-align: center;
+}
+
+.main-contacto .formulario .captcha p{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.main-contacto .formulario input[type=submit]{
+    font-size: 15px;
+    background: lightgray;
+    border: 1px solid grey;
+}
+
+/* ASIDE INDEX */ 
+/* ESTILOS GENERALES AL ASIDE */
+aside {
+    grid-area: aside;
+    display: block;
+    padding: 10px;
+    border-left: 1px solid lightgrey;
+}
+
+aside p{
+    color: #000;
+}
+
+aside p span{
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* ESTILOS ASIDE INDEX */
+aside h2 {
+    text-align: center;
+}
+
+aside .asideTitle{
+    margin: 20px 0px 0px 0px;
+    border-top: 1px solid grey;
+}
+
+aside ol li {
+    margin-left: 15px;
+}
+
+aside ol li a {
+    color: black;
+}
+
+/* ASIDE ESTRENOS--> TABLA ESTATICA */
+.asideEstrenos section table{
+    border: 1px solid black;
+    text-align: center;
+    width: 100%;
+}
+
+.asideEstrenos section table thead{
+    background: grey;
+    font-weight: bold;
+}
+
+.asideEstrenos section table tbody{
+    background: lightgray;
+}
+
+  /* ASIDE ESTRENOS ----> BOLETERIA ONLINE */
+.asideEstrenos .tablaDinamica{
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.asideEstrenos .tablaDinamica  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.asideEstrenos .tablaDinamica .submit{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.asideEstrenos .tablaDinamica input[type=number]{
+    width: 50%;
+    margin: 15px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.asideEstrenos .tablaDinamica h2{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.asideEstrenos .tablaDinamica p{
+    margin-bottom: 10px;
+}
+
+.asideEstrenos .tablaDinamica table{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.asideEstrenos .tablaDinamica input[type=submit], .submit button{
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.asideEstrenos .tablaDinamica input[type=text]{
+    width: 50%;
+    margin: 15px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.asideEstrenos .tablaDinamica form{
+    width: 100%;
+}
+
+.asideEstrenos .tablaDinamica input[type=submit]{
+    margin-top: 20px;
+}
+
+#tabla_total{
+    width: 50%;
+}
+
+#total{
+    background-color: lightgrey;
+}
+
+footer {
+    grid-area: footer;
+    background: #000;
+    color: white;
+    text-align: center;
+}
+
+footer .social {
+    padding: 5px 0;
+}
+
+footer .social i {
+    text-shadow: 1px 2px 2px lightgray;
+}
+
+.oferta {
+    background: yellow;
+}
+
+/******* TABLET *******/
+@media only screen and (min-width: 500px) {
+.contenedor {
+    width: auto;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: 1fr, 3fr, 3fr, 1fr;
+    grid-template-areas:
+            "header header header"
+            "main main main"
+            "aside aside aside"
+            "footer footer footer";
+}
+
+/* ESTILOS AL ENCABEZADO Y AL MENU */
+header {
+    grid-area: header;
+}
+
+header nav ul li {
+    list-style: none;
+    padding: 5px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+}
+
+/* ESTILOS GENERALES AL MAIN */
+main {
+    grid-area: main;
+}
+
+main p{
+    color: #000;
+}
+
+/* ESTILOS MAIN - ESTRNEOS */
+.mainEstrenos section article p{
+    display: none;
+}
+
+.mainEstrenos section article iframe{
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: 250px;
+}
+
+/* ESTILOS MAIN - CONTACTO*/
+.main-contacto{
+    background-image: url(../images/fondo-contacto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    
+}
+
+.main-contacto h1{
+    color: #f2f2f2;
+}
+
+.main-contacto p{
+    color: #f2f2f2;
+    text-align: center;
+}
+
+.main-contacto .formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.377);
+    width: 80%;
+}
+
+.main-contacto .formulario input[type="text"]{
+    width: 50%;
+}
+
+.main-contacto .formulario input[type="email"], .titulo-genero{
+    width: 50%;
+}
+
+.main-contacto .formulario .titulo-genero, .titulo-captcha{
+    margin-top: 20px;
+    color: #f2f2f2;
+    border-bottom: 1px solid white;
+    width: 50%;
+}
+
+.main-contacto .formulario .genero{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-contacto .formulario label{
+    color: #f2f2f2;
+}
+
+.main-contacto .formulario .textarea{
+    width: 50%;
+}
+
+.main-contacto .formulario .captcha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.main-contacto .formulario .captcha p{
+    color: #f2f2f2;
+}
+
+.main-contacto .formulario input[type="submit"]{
+    width: 100px;
+}
+
+/* ESTILOS GENERALES AL ASIDE */
+aside {
+    grid-area: aside;
+}
+
+/* ESTILOS GENERALES AL FOOTER */
+footer {
+    grid-area: footer;
+}
+}
+
+/******* ESCRITORIO *******/
+@media only screen and (min-width: 900px){
+.contenedor {
+        width: auto;
+        grid-template-columns: 4fr, 1fr;
+        grid-template-rows: 1fr, 4fr, 3fr, 1fr;
+        grid-template-areas:
+            "header  header"
+            "main  aside"
+            "main  aside"
+            "footer  footer";
+}
+
+header{
+    grid: header;
+}
+
+header nav .fa-bars{
+    display: none;
+}
+
+header nav ul .fa-times{
+    display: none;
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: inherit;
+}
+
+header nav .menu{
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background: black;
+}
+
+header nav .menu li a {
+    padding: 0 5px;
+    color: white;
+    text-decoration: none;
+}
+
+header nav .menu li a:hover {
+    border-bottom: 1px solid white;
+    font-weight: bold;
+    text-shadow: 1px 2px 2px goldenrod;
+}
+
+/* ESTILOS GENERALES AL MAIN*/
+main{
+    grid-area: main;
+}
+
+/* ESTILOS MAIN - ESTRENOS */
+.mainEstrenos{
+    display: block;
+    margin: auto;
+}
+
+.mainEstrenos section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainEstrenos section article h3{
+    text-align: center;
+}
+
+.mainEstrenos section article p{
+    display: none;
+}
+
+.mainEstrenos section article iframe{
+    width: 500px;
+    height: 300px;
+}
+
+/* ESTILOS GENERALES ASIDE */
+aside{
+    grid-area: aside;
+}
+
+.asideIndex{
+    width: 600px;
+}
+
+/* ESTILOS ASIDE INDEX */
+aside ol li:hover{
+    background: black;
+}
+
+aside ol li:hover a{
+    color: #f2f2f2;
+}
+
+/* ESTILOS ASIDE ESTRENOS */
+.asideEstrenos{
+    width: 800px;
+}
+
+.asideEstrenos section{
+    padding: 10px;
+    display: block;
+    margin: auto;
+}
+
+.asideEstrenos h2{
+    text-align: center;
+}
+
+.asideEstrenos p{
+    text-align: justify;
+}
+
+
+.asideEstrenos section table{
+    border: 1px solid black;
+    text-align: center;
+    width: 90%;
+}
+
+.asideEstrenos section table thead{
+    background: grey;
+    font-weight: bold;
+}
+
+.asideEstrenos section table tbody{
+    background: lightgray;
+}
+
+
+footer{
+    grid-area: footer;
+}
+
+footer i:hover{
+    text-shadow: 2px 4px 4px lightgrey;
+}
+
+.movie{
+    text-decoration: none;
+}
+}
+
+.asideEstrenos .tablaDinamica .tabla-pelicula, td a{
+    color: black;
+}
+
+.asideEstrenos .tablaDinamica .tabla-pelicula, td a:hover{
+    font-weight: bold;
+}
+
+.lista-detalles{
+    margin-top: 20px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background: rgba(0,0,0, .3);
+    box-shadow: 3px 5px 5px darkslategray;
+}
+
+.lista-detalles h3{
+    border-bottom: 1px solid black;
+    text-shadow: 3px 5px 5px darkslategray;
+}
+
+.lista-detalles li{
+    list-style: none;
+    padding: 10px;
+}
+
+.datos-detalles{
+    display: block;
+}
+
+.datos-detalles h3{
+    margin-left: 10px;
+    margin-right: 10px;
+    border-bottom: 1px solid black;
+    text-shadow: 3px 5px 5px darkslategray;
+}
+
+.asideEstrenos .formulario textarea{
+    font-family: inherit;
+    width: 100%;
+}
+
+.asideEstrenos .agregar-pelicula{
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-family: inherit;
+}
+
+.asideEstrenos .agregar-pelicula:hover{
+    background: lightgray;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.asideEstrenos .volver{
+    text-decoration: none;
+    color:inherit;
+    padding:20px;
+    margin-top: 100px;
+}
+
+.asideEstrenos .volver:hover{
+    font-weight: bold;
+}
+
+/* ESTILOS ADMIN */
+.main-admin{
+    padding-bottom: 30px;
+    width: 100%;
+    min-height: 100%;
+    padding: 10px;
+    margin: auto;
+    background: #f2f2f2;
+    display: block;
+}
+
+.main-admin .peliculas h1, h3{
+    text-align: center;
+}
+
+.main-admin .peliculas h3{
+    margin-top: 20px;
+}
+
+.main-admin .sala{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.admin-table{
+    border: 1px solid black;
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+}
+
+.admin-table thead{
+    background: grey;
+    font-weight: bold;
+}
+
+.admin-table thead th{
+    padding: 10px;
+}
+
+.admin-table tbody tr td{
+    padding: 10px;
+}
+
+.admin-table tbody{
+    background: lightgray;
+    
+}
+
+
+.main-admin .alta-baja-update{
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.main-admin h3{
+    border-bottom: 1px solid grey;
+}
+
+.main-admin .alta-baja-update .formulario{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.main-admin .alta-baja-update .formulario label{
+    font-weight: bold;
+}
+
+.main-admin .alta-baja-update .formulario input{
+    width: 30%;
+    font-size: 15px;
+    padding: 2px 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-admin .alta-baja-update .formulario select{
+    width: 30%;
+    font-size: 15px;
+    padding: 2px 5px;
+    margin-bottom: 20px;
+    text-indent: 50%;
+}
+
+.main-admin .alta-baja-update .formulario textarea{
+    font-size: 15px;
+    width: 70%;
+    padding: 2px 5px;
+    font-family: inherit;
+    margin-bottom: 20px;
+}
+
+.main-admin .alta-baja-update .formulario button{
+    font-size: 15px;
+    padding: 2px 5px;
+    margin-bottom: 20px;
+}
+
+.main-admin .links{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.main-admin .links a{
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-admin .links a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.login{
+    height: auto;
+    padding: 20px 0;
+    margin: 0;
+    width: 100%;
+}
+
+.main-contacto{
+    height: max-content;
+    padding: 20px 0;
+    margin: 0;
+    width: 100%;
+}
+
+.login .formulario{
+    width: 60%;
+    height: 60%;
+}
+
+.signup{
+    padding-bottom: 167px;
+}
+
+.login input{
+    margin-bottom: 20px;
+}
+
+.login .boton{
+    margin-top: 20px;
+}
+
+.login .boton:hover{
+    font-weight: bold;
+}
+
+.login .formulario input[type=password]{
+    width: 50%;
+}
+
+.main-error{
+    width: 100%;
+    height: 700px;
+}
+
+.main-admin .divError{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.roomError{
+    color: red;
+    text-align: center;
+    margin-bottom: 100px;
+}  
+
+.error{
+    text-align: center;
+    display: block;
+    width: 200px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.7);
+    color: red;
+}
+
+header .adminMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: gold;
+}
+
+.adminMenu .saludo{
+    font-weight: normal;
+    margin-left: 0px;
+    margin-top: 5px;
+    padding: 0 5px 0 5px;
+    font-size: 15px;
+}
+
+.saludo{
+    width:100%;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.saludo p{
+    font-size: 15px;
+    color: black;
+    text-shadow: none;
+}
+
+.saludo a{
+    text-decoration: none;
+    color: black;
+}
+
+.saludo a:hover{
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+
+.registro a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.registro a:hover{
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
+.users{
+    margin-top: 20px;
+}
+
+.div-comentarios{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.div-comentarios i{
+    padding: 2px;
+}
+
+.div-comentarios i:hover{
+    background: red;
+    color: white;
+}
+
+.caja-comentario{
+    width: 100%;
+    font-style: italic;
+}
+
+.posteo{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: lightgray;
+    border: black;
+    border-radius: 10px;
+}
+
+.nick{
+    font-style: normal;
+    font-weight: bold;
+}
+
+#commentForm input{
+    text-align: center;
+}
+
+#commentForm textarea{
+    padding: 5px;
+}
+
+.box{
+    margin-top: 20px;
+    overflow: scroll;
+    height: inherit;
+}
+
+.box h1{
+    text-align: center;
+}
+
+.busqueda{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+}
+
+.busqueda input{
+    width: 200px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.busqueda input[type=submit]{
+    font-size: 15px;
+    background: lightgray;
+    border: 1px solid grey;
+}
+
+.busqueda label{
+    text-align: center;
+}
+
+.busqueda select{
+    font-size: inherit;
+    font-family: inherit;
+    width: 200px;
+    margin: inherit;
+}
+
+.busqueda .option{
+    font-size: 15px;
+    font-family: inherit;
+    text-align: center;
+}
+
+.buscador{
+    display: flex;
+}
+
+.link-registro{
+    text-decoration: underline;
+    color: white;
+}
+
+.link-registro:hover{
+    font-weight: bold;
+}
+
+.span-registro{
+    color: white;
+}
+
+.box-detalles{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.imgbox{
+    display: block;
+    margin-left: 15px;
+    padding-right: 5px;
+}
+
+.dbimage{
+    width: 200px;
+    height: auto;
+}
+
+.boxMessage{
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    padding-left: 10px;
+    
+}
+
+.logMessage{
+    color: black;
+    font-weight: bold;
+}
+
+.spanMessage{
+    font-style: italic;
+    font-weight: normal;
+}
+
+.editPhoto{
+    display: flex;
+    justify-content: center;
+    height: 330px;
+    font-size: inherit;
+}
+
+.editPhotoForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.editPhotoForm div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50%;
+    padding-bottom: 20px;
+}
+
+.imagebox{
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+    height: 100%;
+}
+
+.imagebox p{
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+.imagebox img{
+    height: 400px;
+    width: 300px;
+}
+
+.puntaje{
+    color: grey;
+}
+
+input[type = "radio"]{
+    display: none;
+}
+
+.clasificacion{
+    direction: rtl; /*Direccion right to left (derecha a izquierda */
+    unicode-bidi: bidi-override; /* bidi de bidireccional */
+}
+
+.puntaje:hover{
+    color:orange;
+}
+
+.puntaje:hover ~ .puntaje{
+    color:orange;
+}
+
+input[type = "radio"]:checked ~ .puntaje{
+    color:orange;
+}
